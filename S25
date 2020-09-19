@@ -1,0 +1,45 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+  //console.log(userInput);
+function lengthOfLongestSubstring(check) {
+  var letters = check.split("");
+  var max = 0;
+  var result = new Map();
+  var start = 0;
+  
+  for (var i = 0; i < letters.length; i++) {
+    if (!result.has(letters[i])) {
+      result.set(letters[i], i);
+    } else {
+      i = result.get(letters[i]);
+      result.clear();
+    }
+    
+    if (max < result.size) {
+      max = result.size;
+    }
+  }
+  return max;
+}
+
+// Example:
+console.log(lengthOfLongestSubstring(userInput[0]));
+
+
+  //end-here
+});

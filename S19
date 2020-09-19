@@ -1,0 +1,37 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+var n=userInput[0]
+var m=userInput[1]
+var m1=userInput[2]
+var m2=userInput[3]
+var m3=userInput[4]
+ var m4=userInput[5]
+if(m==m1 ||m==m2 ||m==3||m4)
+{
+    console.log("yes")
+}
+else
+{
+    console.log("no")
+}
+//for(var i=0)
+  //console.log(userInput);
+
+  //end-here
+});
+
+

@@ -1,0 +1,41 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+  //console.log(userInput);
+var S =userInput[0];
+//console.log(userInput[0])
+function pal(S)
+{
+  var i=0; 
+var j=S.length-1;
+while(i<j)
+{
+    if(S[i]==S[j])
+    {
+        i++;
+        j--;
+    }
+    else
+    {
+        return '0';
+    }
+}
+return '1';
+}
+console.log(pal(S));
+  //end-here
+});

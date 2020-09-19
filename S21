@@ -1,0 +1,37 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+ // console.log(userInput);
+ var data=userInput[0].split(" ").map(String)
+ //var n=userInput(data[0])
+ //var m=parseInt(data[1])
+// console.log(data)
+ 
+if(data[1]=='GUVI')
+{
+    console.log("no")
+}
+else
+{
+    console.log("yes")
+}
+ 
+  //end-here
+});
+
+
+
