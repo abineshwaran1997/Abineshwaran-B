@@ -1,0 +1,29 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+//  console.log(userInput);
+var data=userInput[0].split(" ");
+var SI,P,R,T;
+P=parseFloat(data[0]);
+R=parseFloat(data[1]);
+T=parseFloat(data[2]);
+SI=(P*R*T)/100;
+//console.log(SI);
+console.log(Math.round((SI+Number.EPSILON)*100)/100);
+
+  //end-here
+});

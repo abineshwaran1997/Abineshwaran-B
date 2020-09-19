@@ -1,0 +1,27 @@
+const readline = require('readline');
+const inp = readline.createInterface({
+  input: process.stdin
+});
+const userInput = [];
+inp.on("line", (data) => {
+ userInput.push(data);
+});
+inp.on("close", () => {
+
+var A = userInput[0];
+
+d = "";
+
+if(A===0)
+{
+    console.log("NULL");
+}
+
+for(i=1;i<=A;i++)
+{
+    ans = 9 * i;
+    d = d + ans + " ";
+   
+}
+console.log(d.trim());
+});
