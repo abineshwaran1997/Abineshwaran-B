@@ -1,0 +1,47 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+var data =userInput[0].split(" ")
+var N=parseInt(data[0])
+var K=parseInt(data[1])
+var arr= userInput[1].split(" ").map(Number);
+//console.log(arr)var N
+
+for (var i=0;i<arr.length;i++)
+{
+    if(arr[i]==K)
+    {
+        break;
+    }
+ }   //sum=sum+arr[i]+" ";
+
+    if(i < arr.length)
+    {
+         console.log(K)
+    }
+    else
+    {
+    console.log("-1")
+    }
+
+
+//  console.log(userInput);
+
+  //end-here
+});
+
+
+

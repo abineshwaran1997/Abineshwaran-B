@@ -1,0 +1,45 @@
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+
+  //console.log(userInput);
+var N = userInput[0];
+
+function convertDecimalToBinary(N){
+    var binary = "";
+    var temp = N;
+ 
+    while(temp > 0){
+        if(temp % 2 == 0){
+            binary = "0" + binary;
+        }
+        else {
+            binary = "1" + binary;
+        }
+
+        temp = Math.floor(temp / 2);
+    }
+
+    return binary;
+}
+console.log(convertDecimalToBinary(N));
+  //end-here
+});
+
+
+
+
+
